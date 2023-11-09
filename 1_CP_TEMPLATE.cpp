@@ -1,13 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 /*
  * Author    : Prasant Das
  * Date      : 15:06:2023
  */
 #define mod 1000000007
 #define INF 1e18
-#define inf 1e18
+#define inf 1e9
+#define NINF -1e18
+#define ninf -1e9
 #define vi vector<int>
+#define vll vector<long long>
+#define vl vector<long>
 #define pb push_back
 #define ppb pop_back
 #define mp make_pair
@@ -28,12 +33,16 @@ int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
 void solve() {
     //Write Here
-    cout<<"Hello World!"<<endl;
+    int n;
+    cin>>n;
+    for0(i,n){
+        cout<<"Prasant"<<endl;
+    }
 }
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
     solve();
     return 0;
 }
