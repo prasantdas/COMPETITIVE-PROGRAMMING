@@ -40,7 +40,7 @@ void Update(int ind,int low,int high,int i,int val,int seg[]){
     else{
         Update(2*ind+2,mid+1,high,i,val,seg);
     }
-    seg[ind]=min(seg[2*ind+1],seg[2*ind+1]);
+    seg[ind]=min(seg[2*ind+1],seg[2*ind+2]);
 }
 int main()
 {
