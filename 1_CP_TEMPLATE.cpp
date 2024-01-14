@@ -34,16 +34,16 @@ int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
 void solve() {
     //Write Here
-    int n;
-    cin>>n;
-    for0(i,n){
-        cout<<"Prasant"<<endl;
-    }
+    
 }
 int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    solve();
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++){
+        solve();
+    }
     return 0;
 }
