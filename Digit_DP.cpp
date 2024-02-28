@@ -50,11 +50,13 @@ void BuildSeive(){
 //  string s="2436"
 //     18 * (18*9) * 2
 
+ll dp[20][200][2];
 ll G(string s,int ind=0,ll sum=0,int tight=1){
     if(ind==s.length()){
         if(check[sum])return 1;
         else return 0;
     }
+    if(dp[ind][sum][tight]!=-1)return dp[ind][sum][tight];
     int num=s[ind]-'0';
     if(tight==1){
         ll res=0;
@@ -62,14 +64,14 @@ ll G(string s,int ind=0,ll sum=0,int tight=1){
             if(i<num)res=res+G(s,ind+1,sum+i,0);
             else res=res+G(s,ind+1,sum+i,1);
         }
-        return res;
+        return dp[ind][sum][tight]=res;
     }
     else{
         ll res=0;
         for(int i=0;i<=9;i++){
             res=res+G(s,ind+1,sum+i,0);
         }
-        return res;
+        return dp[ind][sum][tight]=res;
     }
 }
 
@@ -78,7 +80,8 @@ void solve() {
     int n;
     cin>>n;
     string s=to_string(n);
-    cout<<G(s)-G("0")<<endl;
+    memset(dp,-1,sizeof(dp));
+    cout<<G(s)<<endl;
 }
 int main(){
     ios_base::sync_with_stdio(0);
