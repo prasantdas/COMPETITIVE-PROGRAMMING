@@ -42,6 +42,16 @@ void solve() {
     cout<<[](int x,int y){return x+y;}(2,3)<<endl; // One liner lambda function two parameter
     auto sum=[](int x,int y){return x+y;};  // Assigning lambda function to a variable 
     cout<<sum(4,6)<<endl;
+
+    int a=1,b=2;
+    auto sum=[](int x,int& y){
+        x++;
+        y++;
+        return x+y;
+    };
+    cout<<sum(a,b)<<endl; // 5
+    cout<<a<<" "<<b<<endl; // 1 3
+    
     vector<int> v={1,2,-4};
     int arr[5]={1,2,3,4,5};
     int n=5;
