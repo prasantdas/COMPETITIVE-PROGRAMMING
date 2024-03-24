@@ -51,6 +51,15 @@ void solve() {
     };
     cout<<sum(a,b)<<endl; // 5
     cout<<a<<" "<<b<<endl; // 1 3
+
+   function<void(int,int)> dfs=[&](int src,int par){
+        cout<<src<<" ";
+        for(auto x:g[src]){
+            if(x==par)continue;
+            dfs(x,src);
+        }
+    };
+    dfs(1,-1);
     
     vector<int> v={1,2,-4};
     int arr[5]={1,2,3,4,5};
