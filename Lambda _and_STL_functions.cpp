@@ -44,6 +44,8 @@ void solve() {
     cout<<sum(4,6)<<endl;
 
     int a=1,b=2;
+
+    // For non-recursive function use this
     auto sum=[](int x,int& y){
         x++;
         y++;
@@ -51,7 +53,17 @@ void solve() {
     };
     cout<<sum(a,b)<<endl; // 5
     cout<<a<<" "<<b<<endl; // 1 3
+    // [capture clause](paramters){instructions code}
+   // [a]==used to capture the variable a and cannot the value
+   // [a,b]==used to capture the variable a and b and cannot the value
+   // []==used to capture all the variables cannot the value
+   // [&a]==used to capture the variable a and can the values by refernce
+   // [&a,&b]==used to capture the variable a and can the values by refernce
+   // [&]==used to capture all the enclosing scope by reference and can change the values by refernce
+   // []=capture nothing
+   // to change the value of src and par passed them by reference Eg:-(int &src,int &par)
 
+  // For recursive function use this form
    function<void(int,int)> dfs=[&](int src,int par){
         cout<<src<<" ";
         for(auto x:g[src]){
