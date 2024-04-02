@@ -54,11 +54,11 @@ void solve() {
     cout<<sum(a,b)<<endl; // 5
     cout<<a<<" "<<b<<endl; // 1 3
     // [capture clause](paramters){instructions code}
-   // [a]==used to capture the variable a and cannot the value
-   // [a,b]==used to capture the variable a and b and cannot the value
+   // [a]==used to capture the variable a and cannot change the value
+   // [a,b]==used to capture the variable a and b and cannot change the value
    // []==used to capture all the variables cannot change the value
-   // [&a]==used to capture the variable a and can the values by refernce
-   // [&a,&b]==used to capture the variable a and can the values by refernce
+   // [&a]==used to capture the variable a and can change the values by refernce
+   // [&a,&b]==used to capture the variable a and b and can change values by refernce
    // [&]==used to capture all the enclosing scope by reference and can change the values by refernce
    // []=capture nothing
    // to change the value of src and par passed them by reference Eg:-(int &src,int &par)
