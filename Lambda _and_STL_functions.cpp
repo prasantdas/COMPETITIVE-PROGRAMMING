@@ -56,7 +56,7 @@ void solve() {
     // [capture clause](paramters){instructions code}
    // [a]==used to capture the variable a and cannot the value
    // [a,b]==used to capture the variable a and b and cannot the value
-   // []==used to capture all the variables cannot the value
+   // []==used to capture all the variables cannot change the value
    // [&a]==used to capture the variable a and can the values by refernce
    // [&a,&b]==used to capture the variable a and can the values by refernce
    // [&]==used to capture all the enclosing scope by reference and can change the values by refernce
