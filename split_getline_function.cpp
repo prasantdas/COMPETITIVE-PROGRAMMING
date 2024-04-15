@@ -32,19 +32,22 @@ int d2[4] = {0, 0, -1, 1};
 int D1[8] = { -1, -1, -1, 0, 0, 1, 1, 1 };
 int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 }; 
 
-void solve() {
-    //Write Here
-    
-    // Split function in c++ string
-    string str = "Geeks for Geeks";
-    stringstream ss(str);
+vector<string> splitfunction(string s1){
+    stringstream ss(s1);
     string s;
     vector<string> v;
     while (getline(ss, s, ' ')) {
         v.push_back(s);
     }
-    for (int i = 0; i < v.size(); i++) {
-        cout << v[i] << endl;
+    return v;
+}
+
+void solve() {
+    //Write Here
+    string str = "Geeks for Geeks";
+    vector<string> ans=splitfunction(str);
+    for (int i = 0; i < ans.size(); i++) {
+        cout << ans[i] << endl;
     }
     //Ans:-
       // Geeks
