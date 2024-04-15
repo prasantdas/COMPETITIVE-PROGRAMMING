@@ -66,7 +66,6 @@ void solve() {
     
 }
 
- // printf("%.6f\n",ans); //For printing it after 6 decimal places
 int main(){
     #ifndef ONLINE_JUDGE
     freopen("error.txt","w",stderr);
