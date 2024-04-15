@@ -61,6 +61,7 @@ int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
        // SOLVE FOR EACH TEST CASES HERE
 
+ // printf("%.6f\n",ans); //For printing it after 6 decimal places
 void solve() {
     //Write Here
     
