@@ -45,6 +45,12 @@ void _print(bool a){cerr<<a;}
 void _print(double a){cerr<<a;}
 void _print(ull a){cerr<<a;}
 void _print(lld a){cerr<<a;}
+template <class T, class V> void _print(pair <T, V> p1);
+template <class T> void _print(vector <T> v1);
+template <class T> void _print(set <T> s1);
+template <class T, class V> void _print(map <T, V> m1);
+template<class T,class V> void _print(unordered_map<T,V> m2);
+template <class T> void _print(multiset <T> s2);
 template<class T> void _print(vector<T> v1){cerr<<"[";for(T i:v1){ _print(i);cerr<<" ";}cerr<<"]";}
 template<class T> void _print(set<T> s1){cerr<<"[";for(T i:s1){ _print(i);cerr<<" ";} cerr<<"]";}
 template<class T,class V> void _print(pair<T,V> p1){cerr<<"{";_print(p1.first);cerr<<","; _print(p1.second);cerr<<"}";}
