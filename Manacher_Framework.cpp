@@ -68,6 +68,9 @@ int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
        // SOLVE FOR EACH TEST CASES HERE
 
 
+// Check palindrome between [l,r] in O(1)
+// Longest palindrome at a given centre in O(1)
+
 vector<int> Run_Manacher(string t){
     int n=t.length();
     vector<int> p(n,1);
