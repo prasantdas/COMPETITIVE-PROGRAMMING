@@ -70,8 +70,6 @@ int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
 vector<int> Run_Manacher(string t){
     int n=t.length();
-    cout<<n<<endl;
-    cout<<t<<endl;
     vector<int> p(n,1);
     int l=1,r=1;
     for(int i=1;i<n;i++){
@@ -94,7 +92,6 @@ vector<int> Build_String(string s){
         t.push_back(x);
     }
     t.push_back('#');
-    cout<<t<<endl;
     return Run_Manacher(t);
 }
 
@@ -115,10 +112,6 @@ void solve() {
     string s;
     cin>>s;
     vector<int> p=Build_String(s);
-    for(auto x:p){
-        cout<<x<<" ";
-    }
-    cout<<endl;
     cout<<checkPalindrome(0,1,p)<<endl;
     cout<<checkPalindrome(1,5,p)<<endl;
     cout<<endl;
