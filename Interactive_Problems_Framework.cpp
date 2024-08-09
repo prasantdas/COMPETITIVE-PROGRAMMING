@@ -65,6 +65,21 @@ int d2[4] = {0, 0, -1, 1};
 int D1[8] = { -1, -1, -1, 0, 0, 1, 1, 1 };
 int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 }; 
 
+
+
+// In this problem there is some hidden number and you have to interactively guess it. The hidden number is always an integer from 1 and to 1 000 000.
+
+// You can make queries to the testing system. Each query is one integer from 1 to 1 000 000. Flush output stream after printing each query. There are two different responses testing program can provide:
+
+//     string < (without quotes), if the hidden number is less than the integer in your query;
+//     string >= (without quotes), if the hidden number is greater than or equal to the integer in your query.
+
+// When your program wants to guess the hidden number, print string ! x, where x is the answer, and terminate your program immediately after flushing the output stream.
+
+// Your program is allowed to make no more than 25 queries (not including printing the answer) to the testing system.
+
+
+
        // SOLVE FOR EACH TEST CASES HERE
 
 void solve() {
