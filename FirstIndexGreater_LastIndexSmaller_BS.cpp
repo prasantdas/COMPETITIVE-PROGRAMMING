@@ -67,6 +67,36 @@ int D2[8] = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
        // SOLVE FOR EACH TEST CASES HERE
 
+ll FirstIndexGreater(ll s,ll e,vector<ll>& arr,ll val){
+    ll ind=-1;
+    while(s<=e){
+        ll mid=s+(e-s)/2;
+        // Case 1
+        if(arr[mid]>=val){ // Replace sign as per requirement // works for ">="  and ">"
+            ind=mid;
+            e=mid-1;
+        }
+        else{
+            s=mid+1;
+        }
+    }
+    return ind;
+}
+ll LastIndexSmaller(ll s,ll e,vector<ll>& arr,ll val){
+    ll ind=-1;
+    while(s<=e){
+        ll mid=s+(e-s)/2;
+        // Case 2
+        if(arr[mid]<=val){ // Replace sign as per requirement // works for "<="  and "<"
+            ind=mid;
+            s=mid+1;
+        }
+        else{
+           e=mid-1;
+        }
+    }
+    return ind;
+}
 
 ll Function(ll s,ll e,vector<ll>& arr,ll val){
     ll n=arr.size();
