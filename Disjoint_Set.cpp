@@ -27,3 +27,8 @@ class DisjointSet{
         }
     }
   };
+
+// Function to convert Grid coordinates to nodes for DSU
+int node(int i,int j,int m){
+    return i*m+j;
+}
