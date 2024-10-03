@@ -1,12 +1,12 @@
 class DisjointSet{
     public:
-    vector<int> par,size;
+    vector<int> par,Size;
     DisjointSet(int n){
         par.resize(n+1);
-        size.resize(n+1);
+        Size.resize(n+1);
         for(int i=0;i<=n;i++){
             par[i]=i;
-            size[i]=1;
+            Size[i]=1;
         }
     }
     int findUPar(int node){
@@ -17,13 +17,13 @@ class DisjointSet{
         int ulp_u=findUPar(u);
         int ulp_v=findUPar(v);
         if(ulp_u==ulp_v)return;
-        if(size[ulp_u]>size[ulp_v]){
+        if(Size[ulp_u]>Size[ulp_v]){
             par[ulp_v]=ulp_u;
-            size[ulp_u]=size[ulp_u]+size[ulp_v];
+            Size[ulp_u]=Size[ulp_u]+Size[ulp_v];
         }
         else{
             par[ulp_u]=ulp_v;
-            size[ulp_v]=size[ulp_v]+size[ulp_u];
+            Size[ulp_v]=Size[ulp_v]+Size[ulp_u];
         }
     }
   };
